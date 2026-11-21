@@ -36,3 +36,29 @@ void musica_destruir(void *carga);
 - A remoção libera o nó e devolve a carga.
 - Pilha e fila reutilizam as operações da LSE.
 - A biblioteca possui as músicas; fila e histórico apenas as referenciam.
+
+## M02 — Lista simplesmente encadeada (LSE)
+
+### lse_criar
+- Objetivo: criar uma lista vazia.
+- Retorno: ponteiro para a lista criada ou NULL em caso de falha de alocação.
+- Memória: utiliza malloc para alocar a estrutura.
+- Estado inicial: inicio = NULL e tamanho = 0.
+
+### lse_tamanho
+- Objetivo: consultar a quantidade de elementos.
+- Retorno: quantidade armazenada em tamanho; retorna -1 se a lista for NULL.
+
+### lse_primeiro
+- Objetivo: consultar a carga do primeiro nó.
+- Retorno: NULL se a lista for NULL ou estiver vazia; caso contrário, retorna a carga do primeiro nó.
+
+### lse_destruir
+- Objetivo nesta missão: liberar uma lista vazia.
+- Memória: utiliza free para liberar a estrutura da lista.
+- A função não libera cargas de terceiros nesta etapa.
+
+### Invariantes da lista vazia
+- inicio == NULL.
+- tamanho == 0.
+- Não existem nós alocados.

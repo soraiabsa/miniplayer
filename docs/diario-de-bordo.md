@@ -32,3 +32,27 @@ Durante a implementação, comentários antigos do código inicial foram mantido
 - Próxima ação:
 Registrar os contratos das funções implementadas e continuar a implementação das estruturas de dados previstas nas próximas missões.
 > Duplicar esta seção a cada missão e alternar os papéis na dupla.
+
+## Missão M02 — 20/11
+
+- Integrante: ANA SORAIA BARROSO SILVA.
+- Organização: realização individual.
+- Objetivo: implementar a criação, as consultas e a destruição de uma lista vazia.
+
+### O que foi implementado
+- Função lse_criar(), utilizando malloc.
+- Inicialização de inicio com NULL e tamanho com 0.
+- Função lse_tamanho().
+- Função lse_primeiro().
+- Função lse_destruir() para liberar a lista vazia.
+
+### Decisões técnicas
+A estrutura interna da lista e o tipo t_elem foram mantidos em src/lse.c, sem expor seus detalhes em lse.h.
+
+A lista foi inicializada sem nós e com tamanho igual a zero. A função de destruição libera a estrutura da lista sem tentar liberar cargas de terceiros.
+
+### Testes
+O teste incremental fornecido no pacote M02 foi executado sem alterações e passou.
+
+### Próxima ação
+Continuar as atividades conforme as orientações das próximas missões.
