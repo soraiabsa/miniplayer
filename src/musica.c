@@ -13,12 +13,12 @@ t_musica *musica_criar(int id, const char *titulo,
 
     if (titulo == NULL || artista == NULL) {
         return NULL;
-    }
+    }//não cria a music se não houver titulo ou artista
 
     if (strlen(titulo) >= sizeof(((t_musica *)0)->titulo) ||
         strlen(artista) >= sizeof(((t_musica *)0)->artista)) {
         return NULL;
-    }
+    }/*evita que o programa quebre por estourar o limite de caracteres*/
 
     t_musica *musica = malloc(sizeof(t_musica));
 
@@ -34,9 +34,7 @@ t_musica *musica_criar(int id, const char *titulo,
     return musica;
 }
 
-/*
- * Libera a memória ocupada pela música.
- */
+/* Libera a memória ocupada pela música.*/
 void musica_destruir(void *carga) {
     free(carga);
-}
+}//evita o vazamento de memória
