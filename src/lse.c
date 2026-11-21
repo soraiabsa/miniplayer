@@ -47,53 +47,28 @@ void *lse_primeiro(const t_lse *l) {
     return l->inicio->carga;
 }
 
-/* M04: ainda nao implementada. */
-int lse_inserir_inicio(t_lse *l, void *c) {
-    (void)l;
-    (void)c;
-    return 0;
-}
-
-/* M04: ainda nao implementada. */
-int lse_inserir_fim(t_lse *l, void *c) {
-    (void)l;
-    (void)c;
-    return 0;
-}
-
-/* M04: ainda nao implementada. */
-void *lse_remover_inicio(t_lse *l) {
-    (void)l;
-    return NULL;
-}
-
-/* M04: ainda nao implementada. */
-void *lse_buscar(const t_lse *l, const void *ch, t_comparador cmp) {
-    (void)l;
-    (void)ch;
-    (void)cmp;
-    return NULL;
-}
-
-/* M04: ainda nao implementada. */
-void *lse_remover(t_lse *l, const void *ch, t_comparador cmp) {
-    (void)l;
-    (void)ch;
-    (void)cmp;
-    return NULL;
-}
-
-/* M05: ainda nao implementada. */
-int lse_inserir_ordenado(t_lse *l, void *c, t_comparador cmp) {
-    (void)l;
-    (void)c;
-    (void)cmp;
-    return 0;
-}
-
 /* M02: libera uma lista vazia, sem liberar cargas externas. */
-void lse_destruir(t_lse *l, void (*destruir)(void *)) {
-    (void)destruir;
-    free(l);
-}
+void lse_destruir(t_lse *l, void (*destruir)(void *)) { (void)destruir;free(l);}
+
+/*Funções ainda nao implementadas */
+
+/* M04*/
+int lse_inserir_inicio(t_lse *l, void *c) {(void)l;  (void)c; return 0;}
+
+/* M04*/
+int lse_inserir_fim(t_lse *l, void *c) {   (void)l;    (void)c;    return 0;}
+
+/* M04 */
+void *lse_remover_inicio(t_lse *l) { (void)l;  return NULL;}
+
+/* M04*/
+void *lse_buscar(const t_lse *l, const void *ch, t_comparador cmp) { (void)l;  (void)ch;   (void)cmp;return NULL;}
+
+/* M04 */
+void *lse_remover(t_lse *l, const void *ch, t_comparador cmp) { (void)l;  (void)ch;(void)cmp;    return NULL;}
+
+/* M05 */
+int lse_inserir_ordenado(t_lse *l, void *c, t_comparador cmp) {(void)l;(void)c;(void)cmp; return 0;}
+
+
 
